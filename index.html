@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mirotz</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+<header>
+        <div class="logo"><img src="medioak/logoak.gif" alt="Mirotz Logo" /></div>
+        <nav class="main-nav">
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu-list">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul id="menu-list" class="menu-list">
+                <li class="close-menu-item"><button id="close-menu-btn" aria-label="Close menu">&times;</button></li>
+                <li><a href="#interactive-editor">Egin portada</a></li>
+                <li><a href="#music-carousel">Musika</a></li>
+                <li><a href="#upcoming-concerts">Kontzertuak</a></li>
+                <li><a href="#about">Mirotz</a></li>
+                <li><a href=".contact-info">Kontatkua</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="interactive-editor">
+            <div class="cover-selector">
+                <div class="cover-option selected" data-cover="1" style="background-image: url('medioak/PORTADA4-5/zuretzat.jpg');"></div>
+                <div class="cover-option" data-cover="2" style="background-image: url('medioak/PORTADA4-5/amildegian.jpg');"></div>
+                <div class="cover-option" data-cover="3" style="background-image: url('medioak/PORTADA4-5/oihubat.jpg');"></div>
+                <div class="cover-option" data-cover="4" style="background-image: url('medioak/PORTADA4-5/urtarrilan.jpg');"></div>
+                <div class="cover-option" data-cover="5" style="background-image: url('medioak/PORTADA4-5/ilunsentiari.jpg');"></div>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="editor-canvas"></canvas>
+            </div>
+            
+            <div class="editor-controls">
+                <div class="control-group">
+                    <button id="draw-btn" class="active"><img src="medioak/icons/pencil.svg" alt="pencil" style="width:24px; height:24px; color:black;" /></button>
+                    <button id="text-btn"><img src="medioak/icons/format-text.svg" alt="format-text" style="width:24px; height:24px; color:black;" /></button>
+                    <input type="color" id="color-picker" value="#000000" />
+                    <input type="range" id="brush-size" min="1" max="20" value="5" />
+                </div>
+                
+                <div class="control-group">
+                    <button id="clear-btn"><img src="medioak/icons/eraser.svg" alt="eraser" style="width:24px; height:24px; color:black;" /></button>
+                    <button id="save-btn"><img src="medioak/icons/content-save.svg" alt="content-save" style="width:24px; height:24px; color:black;" /></button>
+                    <button id="send-btn"><img src="medioak/icons/send.svg" alt="send" style="width:24px; height:24px; color:black;" /></button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="music-carousel">
+            <div class="section-title">
+                <img src="medioak/LOREBATLANDATZEKO.png" alt="Musika" />
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Songs as before -->
+                    <div class="carousel-item">
+                        <div class="song-card">
+                            <div class="song-video">
+                                <video src="medioak/PORTADAMOBILAK/URTARRILANMOTZA.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <h3 class="song-title">URTARRILAN</h3>
+                            <div class="song-links">
+                                <a href="https://open.spotify.com/track/TRACK_ID_3" target="_blank" title="Escuchar en Spotify">
+                                    <img src="medioak/icons/spotify.svg" alt="spotify" class="song-icon" />
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" title="Ver en YouTube">
+                                    <img src="medioak/icons/youtube.svg" alt="youtube" class="song-icon" />
+                                </a>
+                                <a href="https://bandcamp.com/ARTIST/TRACK_3" target="_blank" title="Escuchar en Bandcamp">
+                                    <img src="medioak/icons/bandcamp.svg" alt="bandcamp" class="song-icon" />
+                                </a>
+                            </div>
+                            <button class="lyrics-toggle">Hitzak</button>
+                            <div class="song-lyrics">
+                                <p>Ez ahal zara <br>
+                                    Txori bezala  <br>
+                                    Hegan airean urtarrilan <br>
+                                    Ta ezin bada <br>
+                                    Hator haizea <br>
+                                    Gogor dabil nire alboan <br>
+                                    <br>
+                                    Hitzez hitz<br>
+                                    Larrea hostoz errefuxiau<br>
+                                    Zure aurpegi<br>
+                                    Barre eta malkoz beteta dau<br>
+                                    Beti
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="song-card">
+                            <div class="song-video">
+                                <video src="medioak/PORTADAMOBILAK/ILUNSENTIARIMOTZA.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <h3 class="song-title">ILUNSENTIARI</h3>
+                            <div class="song-links">
+                                <a href="https://open.spotify.com/track/TRACK_ID_4" target="_blank" title="Entzun Spotifyen">
+                                    <img src="medioak/icons/spotify.svg" alt="spotify" class="song-icon" />
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" target="_blank" title="Ikusi Youtuben">
+                                    <img src="medioak/icons/youtube.svg" alt="youtube" class="song-icon" />
+                                </a>
+                                <a href="https://bandcamp.com/ARTIST/TRACK_4" target="_blank" title="Entzun Bandcampen">
+                                    <img src="medioak/icons/bandcamp.svg" alt="bandcamp" class="song-icon" />
+                                </a>
+                            </div>
+                            <button class="lyrics-toggle">Hitzak</button>
+                            <div class="song-lyrics">
+                                <p>Egun gainbehera, hitzaren bide, <br>
+                                    asteko azken argi hizpiaren, <br>
+                                    pentsamenduaren <br>
+                                    Iparraldea, galduta dago  <br>
+                                    saguzar ehiztariak kaiolatik aske.<br>
+                                    Su etena eskatu duen eguzkiak <br>
+                                    ez du gogoratzen<br>
+                                    <br>
+                                    Utzi ditu hiriak hotz ostadarrak <br>
+                                    pizten dituen horrek<br>
+                                    bitartean izakiak bildu dira <br>
+                                    izarrak gonbidatzen ez dituen zeruan<br>
+                                    Haur galduek ez diote beldurra, ikusezinak dira<br>
+                                    <br>
+                                    Iluntzear da, etxea ez da bero<br>
+                                    Amets gaizto bat, logelara sartzean<br>
+                                    luntzean, iluntzean, gauero gauero<br>
+                                    Iluntzear da, iluntzear da</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="song-card">
+                            <div class="song-video">
+                                <video src="medioak/PORTADAMOBILAK/OIHUBATMOTZA.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <h3 class="song-title">OIHU BAT</h3>
+                            <div class="song-links">
+                                <a href="https://open.spotify.com/track/TRACK_ID_5" target="_blank" title="Entzun Spotifyen">
+                                    <img src="medioak/icons/spotify.svg" alt="spotify" class="song-icon" />
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=VIDEO_ID_5" target="_blank" title="Ikusi Youtuben">
+                                    <img src="medioak/icons/youtube.svg" alt="youtube" class="song-icon" />
+                                </a>
+                                <a href="https://bandcamp.com/ARTIST/TRACK_5" target="_blank" title="Entzun Bandcampen">
+                                    <img src="medioak/icons/bandcamp.svg" alt="bandcamp" class="song-icon" />
+                                </a>
+                            </div>
+                            <button class="lyrics-toggle">Hitzak</button>
+                            <div class="song-lyrics">
+                                <p>Zure arnasa deabruarena da <br>
+                                    gorpu hustu baten begirada <br>
+                                    zertaz mozorrotuko zara. odola <br>
+                                    Ipar haize baten hotzikarak<br>
+                                    Biluztu nau gaurko gabian<br>
+                                    Zer erori da gure aurrean, gorpu bat<br>
+                                    <br>
+                                    Ta orain zelan da, ordua joan da<br>
+                                    inork ez du ezer ikusiko<br>
+                                    nola izan den gure heriotza<br>
+                                    zein ote den aurrean<br>
+                                    Haien erreinua, gure miseria<br>
+                                    Inor ez da gutaz oroituko<br>
+                                    zapi beltz bat, odol aurrean, zenbatenak<br>
+                                    <br>
+                                    Hitz bategaz isilduko dira<br>
+                                    Zure ahotik ustel usaina<br>
+                                    Zeren bila zabiz itzaletan, kontrola<br>
+                                    Begitara begiratu ta mina,<br>
+                                    Erakutsi dituzu hortzak<br>
+                                    Zer al zara zu, putre beltza, mamu bat?<br>
+                                    <br>
+                                    Eta sute bat, izan da behar, baina ezinezkoa da<br>
+                                    Bi suziri daude hemen, bat zu ta bat niretzat</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="song-card">
+                            <div class="song-video">
+                                <video src="medioak/PORTADAMOBILAK/ZURETZATMOTZA.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <h3 class="song-title">ZURETZAT</h3>
+                            <div class="song-links">
+                                <a href="https://open.spotify.com/track/TRACK_ID_6" target="_blank" title="Entzun Spotifyen">
+                                    <img src="medioak/icons/spotify.svg" alt="spotify" class="song-icon" />
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=VIDEO_ID_6" target="_blank" title="Ikusi Youtuben">
+                                    <img src="medioak/icons/youtube.svg" alt="youtube" class="song-icon" />
+                                </a>
+                                <a href="https://bandcamp.com/ARTIST/TRACK_6" target="_blank" title="Entzun Bandcampen">
+                                    <img src="medioak/icons/bandcamp.svg" alt="bandcamp" class="song-icon" />
+                                </a>
+                            </div>
+                            <button class="lyrics-toggle">Hitzak</button>
+                            <div class="song-lyrics">
+                                <p>Nolatan <br>
+                                    Zabitzen hemendik korrika <br>
+                                    Dena dau <br>
+                                    Gorri zure atzetik erreta <br>
+                                    <br>
+                                    Zerua ilun dau <br>
+                                    Nora zoazen jakin nahi dut <br>
+                                    Hitz eman ahopekoz <br>
+                                    Lilurak ez direla aldatuko <br>  
+                                    <br>
+
+                                    Euriak 
+                                    Itzaliko ditu txingarrak <br>
+                                    Egon lasai
+                                    Ekaitzan ostean barea <br>
+                                    <br>
+
+                                    Itxaso
+                                    Gainezka ardoz <br>
+                                    Zure izena jakin nahi dut <br>
+                                    Hitz eman lelo ero <br>
+                                    Ez zarela inoiz joango <br>
+                                    <br>
+
+                                    Itzala begi aurrean <br>
+                                    Besarkada bat <br>
+                                    Txoriak gabian hegan <br>
+                                    Badoaz zure adorez <br>
+
+
+                                    Ez gorde ezebez
+                                    </p>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="song-card">
+                            <div class="song-video">
+                                <video src="medioak/PORTADAMOBILAK/AMILDEGIANMOTZA.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <h3 class="song-title">AMILDEGIAN</h3>
+                            <div class="song-links">
+                                <a href="https://open.spotify.com/track/TRACK_ID_8" target="_blank" title="Entzun Spotifyen">
+                                    <img src="medioak/icons/spotify.svg" alt="spotify" class="song-icon" />
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=VIDEO_ID_8" target="_blank" title="Ikusi Youtuben">
+                                    <img src="medioak/icons/youtube.svg" alt="youtube" class="song-icon" />
+                                </a>
+                                <a href="https://bandcamp.com/ARTIST/TRACK_8" target="_blank" title="Entzun Bandcampen">
+                                    <img src="medioak/icons/bandcamp.svg" alt="bandcamp" class="song-icon" />
+                                </a>
+                            </div>
+                            <button class="lyrics-toggle">Hitzak</button>
+                            <div class="song-lyrics">
+                                <p>Amildegi parean, labana lepoan <br>
+                                    beldurra dut, beldurra dut <br>
+                                    Hemen jarrita nago, zure esperoan<br>
+                                    Zatoz buetan, zatoz bueltan<br>
+                                    <br>
+                                    Nigaz zauzela, esaten dozte denak<br>
+                                    Amildegian, zer zabizie bilatzen<br>
+                                    <br>
+                                    Urruti ikusten zaitut, ginenetik ihes<br>
+                                    nora zoaz, nora zoaz<br>
+                                    Maitemindu ninduzun, maitemindu ninduzun<br>
+                                    Ta orain zer da, ta orain zer?<br>
+                                    <br>
+                                    Nigaz zauzela, esaten dozte denak<br>
+                                    Amildegian, zer zabizie bilatzen<br>
+                                    <br>
+                                    Dena pena, dena gerra<br>
+                                    Dena bera, dena gerra<br>
+                                    Gerra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <button class="carousel-nav prev-btn" aria-label="Anterior canción"><</button>
+                <button class="carousel-nav next-btn" aria-label="Siguiente canción">></button>
+            </div>
+        </section>
+        
+        <section id="upcoming-concerts">
+            <h2>KONTZERTUAK</h2>
+            <ul class="concert-list">
+                <li>
+                    <span class="concert-date">2025-06-26</span> - 
+                    <span class="concert-location">Zarautz</span> - 
+                    <span class="concert-venue">San Pelaioak</span>
+                </li>
+                <li>
+                    <span class="concert-date">2025-06-27</span> - 
+                    <span class="concert-location">Gasteiz</span> - 
+                    <span class="concert-venue">Aranbizkarra</span>
+                </li>
+                <li>
+                    <span class="concert-date">2025-07-10</span> - 
+                    <span class="concert-location">Iruña</span> - 
+                    <span class="concert-venue">Herri San Ferminak</span>
+                </li>
+                <li>
+                    <span class="concert-date">2025-07-12</span> - 
+                    <span class="concert-location">Otxandio</span> - 
+                    <span class="concert-venue">Gazte Eguna</span>
+                </li>
+                <li>
+                    <span class="concert-date">2025-08-05</span> - 
+                    <span class="concert-location">Gasteiz</span> - 
+                    <span class="concert-venue">Falerina</span>
+                </li>
+                <li>
+                    <span class="concert-date">2025-08-06</span> - 
+                    <span class="concert-location">Gasteiz</span> - 
+                    <span class="concert-venue">Txosnak</span>
+                </li>
+                <li>
+                    <span class="concert-date">2025-08-18</span> - 
+                    <span class="concert-location">Oronoz</span> - 
+                    <span class="concert-venue">Karpa Nagusia</span>
+                </li>
+                <li>
+                    <span class="concert-date">2025-08-22</span> - 
+                    <span class="concert-location">Bilbo</span> - 
+                    <span class="concert-venue">Askapeña Konpartsa</span>
+                </li>
+                <li>
+                    <span class="concert-date">2024-09-05</span> - 
+                    <span class="concert-location">Gasteiz</span> - 
+                    <span class="concert-venue">Ariznabarra</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="about">
+            <div class="band-info">
+                <p>Gateztik datorren haize berria. Mirotz 2023ko urrian sortu zuten Markel (bateria) Julen (baxua eta ahotsa) eta Aritzek (gitarra eta ahotsa). Taldearen oinarriak ezartzen eta hegaldia diseinatzen aritu ondoren, lehen EPa aurkezten da: Lore bat Landatzeko</p>
+            </div>
+        </section>
+        
+        <section class="contact-info">
+            <a href="https://instagram.com/_mirotz" target="_blank" aria-label="Instagram" class="contact-icon" title="Instagram">
+              <img src="medioak/icons/instagram.svg" alt="instagram" class="footer-icon" />
+            </a>
+            <a href="mailto:mirotz.taldea@gmail.com" aria-label="Email" class="contact-icon" title="Email">
+              <img src="medioak/icons/email.svg" alt="email" class="footer-icon" />
+            </a>
+            <a href="https://open.spotify.com/artist/your-artist-id" target="_blank" aria-label="Spotify" class="contact-icon" title="Spotify">
+              <img src="medioak/icons/spotify.svg" alt="spotify" class="footer-icon" />
+            </a>
+            <a href="https://www.youtube.com/channel/your-channel-id" target="_blank" aria-label="YouTube" class="contact-icon" title="YouTube">
+              <img src="medioak/icons/youtube.svg" alt="youtube" class="footer-icon" />
+            </a>
+        </section>
+    </main>
+    
+    <div id="add-text-modal">
+        <div id="text-input-container">
+            <input type="text" id="text-input" placeholder="Idatzi zure testua hemen" />
+            <p style="margin: 10px 0; font-size: 0.9rem;">Ondoren, testua mugitu ahal izango duzu eta tamaina aldatu.</p>
+            <div class="modal-buttons">
+                <button id="cancel-text-btn">Utzi</button>
+                <button id="confirm-text-btn">Gehitu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/carrousel.js"></script>
+</body>
+</html>

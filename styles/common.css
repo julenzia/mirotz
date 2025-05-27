@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;400i&display=swap');
+
+/* Common styles for all pages */
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header {
+    padding: 2rem 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.media-container {
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 125%; /* 4:5 aspect ratio */
+    overflow: hidden;
+    border: 1px solid #eee;
+    background-color: #000;
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+audio {
+    width: 100%;
+    margin-top: 1rem;
+    outline: none;
+}
+
+a.back-link {
+    background-color: transparent;
+    display: inline-block;
+    margin-top: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    border: 2px solid white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+a.back-link:hover {
+    background-color: white;
+    color: black;
+}
+
+.contact-info a {
+    display: inline-block;
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-info a .iconify {
+    font-size: 32px;
+    color: inherit;
+    vertical-align: middle;
+}
