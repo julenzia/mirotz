@@ -612,14 +612,19 @@ input[type="color"]::-webkit-color-swatch {
 
 @media (max-width: 767px) {
     #upcoming-concerts {
-        padding: 1rem 1rem;
+        padding: 1rem 0.5rem;
         font-size: 1rem;
+        max-width: 95%;
+        margin: 1rem auto;
     }
     #upcoming-concerts h2 {
         font-size: 1.5rem;
     }
     #upcoming-concerts .concert-list li {
         margin-bottom: 0.5rem;
+        line-height: 1.6;
+        padding: 0.5rem 0.75rem;
+        font-weight: 600;
     }
 }
 
@@ -676,4 +681,20 @@ input[type="color"]::-webkit-color-swatch {
 .contact-info a:hover img {
     transform: scale(1.2);
     filter: brightness(0) invert(0.7); /* slightly different on hover */
+}
+
+@media (max-width: 767px) {
+    .contact-info {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .contact-info a {
+        margin: 0 0.7rem;
+    }
+    .contact-info a img {
+        width: 40px;
+        height: 40px;
+    }
 }
