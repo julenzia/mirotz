@@ -549,6 +549,30 @@ input[type="color"]::-webkit-color-swatch {
         cursor: pointer;
         color: black;
     }
+
+    /* Additional mobile performance improvements */
+    /* Remove background image removal on mobile to keep same as desktop */
+    body {
+        /* background-image: none; */
+        /* background-color: #f0f0f0;  lighter background for mobile */
+    }
+
+    /* Show cover selector on mobile */
+    .cover-selector {
+        display: flex; /* show cover selector on mobile */
+    }
+
+    .canvas-container {
+        max-width: 100%;
+        max-height: none;
+        border: none;
+    }
+
+    .song-video video {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 }
 @media (min-width: 768px) {
     .close-menu-item {
